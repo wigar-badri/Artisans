@@ -30,6 +30,7 @@ class Book(db.Model, SerializerMixin):
     __tablename__ = 'books'
 
     id = db.Column(db.Integer, primary_key=True)
+    image = db.Column(db.String)
     title = db.Column(db.String, nullable=False)
     author = db.Column(db.String)
     description = db.Column(db.String)
