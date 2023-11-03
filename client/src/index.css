@@ -225,6 +225,7 @@ p {
 }
 
 
+
 @media screen and (min-width: 768px) {
   .menu-item {
     grid-template-columns: 225px 1fr;
@@ -244,3 +245,229 @@ p {
     height: 150px;
   }
 }
+.image-container {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Ensures the image covers the container */
+}
+
+
+/* ---------------- SHOP ------------------------- */
+
+/* ----- DONATE FORM ----- */
+.donate-form {
+  flex: 45%; /* Take up 45% of the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align at the bottom */
+  padding: 20px;
+  width: 95%; /* Make the form wider by 30% */
+}
+
+
+/* Form styling (use your existing form styles) */
+.donate-form form {
+  display: block;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 2px #ddd;
+  max-width: 400px;
+  max-height: 700px;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.donate-form input,
+.donate-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+  font-family: inherit;
+}
+
+.donate-form input::placeholder,
+.donate-form textarea::placeholder {
+  color: #aaa;
+}
+
+.donate-form input:focus,
+.donate-form textarea:focus {
+  outline: none;
+  border-color: #422800;
+}
+
+.donate-form span {
+  color: var(--mainColor);
+}
+
+/* Form button styles */
+.donate-form button {
+  margin-top: 0px; /* Add margin at the top */
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 2px 2px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0 18px;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.donate-form button:hover,
+.donate-form button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+/* ----- BOOK PAGE ----- */
+.page-container {
+  display: flex;
+  width: 100%; /* Make sure the container takes full width */
+}
+/* ----- SIDEBAR ----- */
+
+/*  ----- BOOK LIST ----- */
+.cards {
+  list-style: none;
+  flex: 55%; /* Take up 55% of the page */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; 
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  height: 180vh;
+  overflow-y: scroll;
+}
+/* ----- CARDS ----- */
+
+/* Style for each individual card */
+.card {
+  width: calc(100% - 20px); /* Take up full width with spacing */
+  margin: 20px 0; /* Adjust the vertical spacing */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+/* Additional styling for card elements */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}
+
+/* Media query for responsive layout adjustments */
+@media (max-width: 768px) {
+  .cards {
+    justify-content: center; /* Center the cards horizontally on smaller screens */
+  }
+  
+  .card {
+    width: calc(50% - 20px); /* Two cards in a row with spacing */
+    margin: 20px 0;
+  }
+}
+
+.card button {
+  margin-top: 0.5rem;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0 18px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card button:hover,
+.card button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+/*  ----- SELECT CATEGORY ----- */
+/* Button container on the upper right-hand side */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  flex: 5; /* Take up 40% of the page */
+  gap: 10px;
+  position: sticky;
+  top: 100px; /* Adjust top position to be 20px below the header */
+  left: 20px; /* Align to the right-hand side */
+  padding: 20px;
+  background-color: var(--Color);
+  width: 200px; /* Adjust the width as needed */
+  z-index: 999; /* Make sure the button container is above other elements */
+}
+
+.button-container button {
+  padding: 10px;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.button-container button:hover {
+  background-color: #f0e1c2;
+}
+
+.button-container button.active {
+  background-color: #ccc;
+}
+

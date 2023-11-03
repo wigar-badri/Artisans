@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import MenuCategory from '../components/MenuCategory'
+import Categories from '../components/Categories'
 import items from '../components/MenuItems'
+import MenuCard from '../components/MenuCard'
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))]
 
@@ -26,12 +27,12 @@ function Menu () {
                 <h2>Menus</h2>
                 <div className="underline"></div>
             </div>
-            <MenuCategory
+            <Categories
                 categories={categories}
                 activeCategory={activeCategory}
                 filterItems={filterItems}
             />
-            <Menu items={menuItems} />
+            <MenuCard items={menuItems} />
             </section>
       </main>
     )

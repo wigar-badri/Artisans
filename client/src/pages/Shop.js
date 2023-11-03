@@ -1,11 +1,12 @@
 import React from 'react'
+import BookPage from './BookPage'
 
 function Shop () {
 
     return (
-        <div>
-            <h1>Shop Page</h1>
-        </div>
+    <React.Fragment>
+      <BookPage />
+    </React.Fragment>
     )
 }
 
